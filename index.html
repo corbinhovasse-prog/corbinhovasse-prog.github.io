@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Corbin Hovasse · Data Science &amp; Machine Learning</title>
+<meta name="description" content="Corbin Hovasse: data science and machine learning for the physical sciences. MSU Denver DSML '27, U.S. Army veteran, Denver CO.">
+<meta property="og:title" content="Corbin Hovasse · Data Science & Machine Learning">
+<meta property="og:description" content="Data pipelines and ML for space, physics and earth science data.">
+<style>
+  :root {
+    --bg: #f6f5f1; --card: #fdfdfb; --ink: #111; --ink-2: #4c4b47; --ink-3: #807e77;
+    --line: #e2e0d8; --accent: #2a78d6; --accent-ink: #1c5cab;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #111110; --card: #1a1a19; --ink: #f0efec; --ink-2: #c3c2b7; --ink-3: #8d8c85;
+            --line: #2c2c2a; --accent: #5598e7; --accent-ink: #86b6ef; }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--ink);
+         font: 17px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  .wrap { max-width: 860px; margin: 0 auto; padding: 0 22px; }
+  a { color: var(--accent-ink); text-underline-offset: 3px; }
+  .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+
+  header { padding: 72px 0 40px; }
+  .kicker { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); }
+  h1 { font-size: clamp(38px, 7vw, 60px); line-height: 1.04; margin: 10px 0 14px; letter-spacing: -0.02em; }
+  .tagline { font-size: clamp(19px, 2.6vw, 23px); color: var(--ink-2); max-width: 640px; margin: 0 0 18px; line-height: 1.4; }
+  .facts { color: var(--ink-3); font-size: 15px; margin: 0 0 26px; }
+  .buttons { display: flex; flex-wrap: wrap; gap: 10px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 10px;
+         border: 1px solid var(--line); background: var(--card); color: var(--ink); text-decoration: none; font-size: 15px; font-weight: 550; }
+  .btn:hover { border-color: var(--accent); }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+
+  section { padding: 28px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-3); margin: 0 0 16px; font-weight: 600; }
+  .about p { margin: 0 0 14px; color: var(--ink-2); max-width: 680px; }
+  .about strong { color: var(--ink); font-weight: 600; }
+
+  .project { background: var(--card); border: 1px solid var(--line); border-radius: 16px; padding: 24px; }
+  .project h3 { font-size: 24px; margin: 0 0 4px; letter-spacing: -0.01em; }
+  .project .what { color: var(--ink-3); font-size: 14px; margin-bottom: 14px; }
+  .project p { color: var(--ink-2); margin: 0 0 14px; }
+  .project ul { color: var(--ink-2); margin: 0 0 16px; padding-left: 20px; }
+  .project li { margin-bottom: 6px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 18px; }
+  .tag { font-size: 12.5px; padding: 3px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--ink-2); }
+
+  .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  @media (max-width: 680px) { .cols { grid-template-columns: 1fr; } }
+  .list { list-style: none; padding: 0; margin: 0; color: var(--ink-2); }
+  .list li { padding: 5px 0; border-bottom: 1px dashed var(--line); }
+  .list li span { color: var(--ink-3); font-size: 14px; }
+
+  footer { padding: 34px 0 60px; border-top: 1px solid var(--line); color: var(--ink-3); font-size: 15px; }
+  footer a { margin-right: 16px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Denver, Colorado</div>
+    <h1>Corbin Hovasse</h1>
+    <p class="tagline">I build data pipelines and machine learning models for messy, real-world scientific data.</p>
+    <p class="facts">B.S. Data Science &amp; Machine Learning, MSU Denver (May 2027) · U.S. Army veteran</p>
+    <div class="buttons">
+      <a class="btn primary" href="https://corbinhovasse-prog.github.io/solar-wind-l1/">See the live project →</a>
+      <a class="btn" href="resume.pdf">Resume (PDF)</a>
+      <a class="btn" href="https://www.linkedin.com/in/corbin-h-923318107/">LinkedIn</a>
+      <a class="btn" href="https://github.com/corbinhovasse-prog">GitHub</a>
+      <a class="btn" href="mailto:corbinhovasse@gmail.com">Email</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>About</h2>
+    <p>I'm drawn to problems where the data comes from the physical world: <strong>space, physics, geology,
+      and anything else where the measurements are hard to get</strong>. I'm most interested in the edge of what we can currently
+      measure and predict, and I try to be just as clear about where a model stops being trustworthy.</p>
+    <p>Before school I served in the U.S. Army as an airborne infantry mortarman with the 1-501st Parachute
+      Infantry Regiment in Alaska. There, real-time data, precise calculation and clear communication under pressure had real consequences. I bring the same
+      discipline to data work: check the inputs, know the error bars, and make the output something a person can act on.</p>
+  </section>
+
+  <section>
+    <h2>Featured project</h2>
+    <div class="project">
+      <h3>Three spacecraft, one solar wind</h3>
+      <div class="what">Real-time data pipeline · updates every 30 minutes</div>
+      <p>NOAA's new SOLAR-1 satellite went operational in June 2026, joining NASA's IMAP and ACE at the
+        Sun–Earth L1 point. For the first time, three spacecraft stream live solar wind data side by side. This pipeline
+        ingests all three, archives the history, and turns it into decisions:</p>
+      <ul>
+        <li>Physics-derived features: ram pressure, solar wind–magnetosphere coupling, and the warning time before the wind reaches Earth</li>
+        <li>Anomaly detection (Isolation Forest) to flag shocks and solar storm arrivals</li>
+        <li>Cross-spacecraft comparison: calibration bias, correlation, and timing lag between instruments</li>
+        <li>Kafka streaming layer that raises alerts as each minute of data arrives</li>
+      </ul>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">pandas</span><span class="tag">scikit-learn</span>
+        <span class="tag">Apache Kafka</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span>
+        <span class="tag">Chart.js</span><span class="tag">Space physics</span>
+      </div>
+      <div class="buttons">
+        <a class="btn primary" href="https://corbinhovasse-prog.github.io/solar-wind-l1/">Live dashboard</a>
+        <a class="btn" href="https://github.com/corbinhovasse-prog/solar-wind-l1">Code &amp; write-up</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="cols">
+      <div>
+        <h2>Coursework</h2>
+        <ul class="list">
+          <li>Machine Learning</li>
+          <li>Probability &amp; Statistics · Statistical Methods</li>
+          <li>Applied Linear Algebra</li>
+          <li>Data Science · Data Visualization</li>
+          <li>Database Systems</li>
+          <li>Software Development Methods &amp; Tools</li>
+        </ul>
+      </div>
+      <div>
+        <h2>Spring 2027</h2>
+        <ul class="list">
+          <li>Deep Learning</li>
+          <li>Cloud Computing</li>
+          <li>Senior Experience <span>· capstone</span></li>
+        </ul>
+        <h2 style="margin-top:26px">Open to</h2>
+        <p style="margin:0;color:var(--ink-2)">Data science, ML and data engineering roles and internships, especially in science, space, and Earth-observation.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <a href="mailto:corbinhovasse@gmail.com">corbinhovasse@gmail.com</a>
+    <a href="https://www.linkedin.com/in/corbin-h-923318107/">LinkedIn</a>
+    <a href="https://github.com/corbinhovasse-prog">GitHub</a>
+  </footer>
+</div>
+</body>
+</html>
