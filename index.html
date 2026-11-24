@@ -94,14 +94,16 @@
         Sun–Earth L1 point. For the first time, three spacecraft stream live solar wind data side by side. This pipeline
         ingests all three, archives the history, and turns it into decisions:</p>
       <ul>
-        <li>Physics-derived features: ram pressure, solar wind–magnetosphere coupling, and the warning time before the wind reaches Earth</li>
-        <li>Anomaly detection (Isolation Forest) to flag shocks and solar storm arrivals</li>
-        <li>Cross-spacecraft comparison: calibration bias, correlation, and timing lag between instruments</li>
+        <li>Physics-derived features: ram pressure (including helium), solar wind–magnetosphere coupling, and each spacecraft's warning time</li>
+        <li>Event detection from physical rules checked on every minute, one calibrated on 26 years of NASA data, plus an Isolation Forest for unusual intervals</li>
+        <li>Cross-spacecraft comparison: calibration offsets, change-based tracking tested against chance, and timing predicted from spacecraft positions</li>
+        <li>Kp model scored on years it never saw (out-of-sample R² 0.78), with autocorrelation-aware statistics</li>
         <li>Kafka streaming layer that raises alerts as each minute of data arrives</li>
+        <li>232 automated tests that plant known answers in synthetic data and check they're recovered</li>
       </ul>
       <div class="tags">
         <span class="tag">Python</span><span class="tag">pandas</span><span class="tag">scikit-learn</span>
-        <span class="tag">Apache Kafka</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span>
+        <span class="tag">Apache Kafka</span><span class="tag">Docker</span><span class="tag">GitHub Actions</span><span class="tag">pytest</span>
         <span class="tag">Chart.js</span><span class="tag">Space physics</span>
       </div>
       <div class="buttons">
